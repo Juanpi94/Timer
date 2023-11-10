@@ -22,18 +22,18 @@
         </section>
 
         <section class="container">
-            <div v-for="n in 1" class="m-2 p-2 item bg-black bg-opacity-50 rounded-4 justify-content-center">
+            <div v-for="n in 4" class="m-2 p-2 item bg-black bg-opacity-50 rounded-4 justify-content-center border">
                 <div class="mb-2 d-flex w-100 h-25">
-                    <div class="me-1 w-25 bg-black bg-opacity-50 rounded-2">
+                    <div class="me-1 w-25 bg-black bg-opacity-50 rounded-4">
                         <h4 class="text-info">Name of timer</h4>
                     </div>
-                    <div class="p-2 w-75 d-flex justify-content-end align-items-center bg-black bg-opacity-50 rounded-2">
+                    <div class="p-2 w-75 d-flex justify-content-around align-items-center bg-black bg-opacity-50 rounded-4">
                         <button class="h-75 btn btn-info fw-bold ms-2" type="button"><i class="fa-solid fa-play"></i></button>
                         <button class="h-75 btn btn-info fw-bold ms-2" type="button"><i class="fa-solid fa-pause"></i></i></button>
                         <button class="h-75 btn btn-info fw-bold ms-2" type="button"><i class="fa-solid fa-stop"></i></button>
                         <button class="h-75 btn btn-info fw-bold ms-2" type="button"><i class="fa-solid fa-clock-rotate-left"></i></button>
-                        <button class="h-75 btn btn-info fw-bold ms-2" type="button"><i class="fa-solid fa-lock-open"></i></button>
-                        <button class="h-75 btn btn-info fw-bold ms-2" type="button"><i class="fa-solid fa-lock"></i></button>
+                        <button class="h-75 btn btn-info fw-bold ms-2" type="button" @click="cambiarValor" v-if="!isBlock"><i class="fa-solid fa-lock-open"></i></button>
+                        <button class="h-75 btn btn-info fw-bold ms-2" type="button" @click="cambiarValor" v-if="isBlock"><i class="fa-solid fa-lock"></i></button>
                         <button class="h-75 btn btn-info fw-bold ms-2" type="button"><i class="fa-solid fa-trash"></i></button>
                     </div>
                 </div>
@@ -65,10 +65,10 @@
                         <hr class="m-0">
                         <div class="h-50 mt-2 w-100">
                             <div class="p-1 w-100 d-flex btn-group-sm justify-content-around">
-                                <button class="btn btn-info fw-bold ms-2" type="button">+5m</button>
+                                <button class="btn btn-info fw-bold ms-2" type="button">+1m</button>
                                 <button class="btn btn-info fw-bold ms-2" type="button">+10m</button>
                                 <button class="btn btn-info fw-bold ms-2" type="button">+1h</button>
-                                <button class="btn btn-info fw-bold ms-2" type="button">-5m</button>
+                                <button class="btn btn-info fw-bold ms-2" type="button">-1m</button>
                                 <button class="btn btn-info fw-bold ms-2" type="button">-10m</button>
                                 <button class="btn btn-info fw-bold ms-2" type="button">-1h</button>
                             </div>
