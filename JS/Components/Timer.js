@@ -1,9 +1,9 @@
 app.component('Timer', {
     data() {
         return {
-            hours: 0,
-            minutes: 0,
-            seconds: 0,
+            hours: '',
+            minutes: '',
+            seconds: '',
             timer: null,
             name: '',
             image: null,
@@ -18,7 +18,7 @@ app.component('Timer', {
         }
     },
     mounted() {
-
+        
     },
     methods: {
         playSound() {
